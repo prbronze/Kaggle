@@ -35,5 +35,5 @@ venv/
 ENV/
 
 #data files
-
+.data/
 .data
