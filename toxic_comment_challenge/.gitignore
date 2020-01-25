@@ -33,3 +33,7 @@ coverage.xml
 .venv
 venv/
 ENV/
+
+#data files
+
+.data
