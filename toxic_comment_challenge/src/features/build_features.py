@@ -14,7 +14,7 @@ def text_stats_features(data_set):
     Returns
     -------
     df : DataFrame
-        DataFrame passed to function with extracted features added as columns to it.
+        DataFrame of text statistics features extracted.
     """
     
     df = data_set.copy()
@@ -47,5 +47,7 @@ def text_stats_features(data_set):
     
     df['num_smilies'] = df['comment_text']\
         .apply(lambda comment: sum(comment.count(w) for w in (':-)', ':)', ';-)', ';)')))
+    
+    df = df.drop(['comment_text'],axis=1)
     
     return df
