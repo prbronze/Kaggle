@@ -29,7 +29,9 @@ def plot_curve(estimator, X, yt):
         train_sizes, train_scores, test_scores = \
                     learning_curve(estimator,X,y,
                                    train_sizes=np.linspace(.1, 1.0, 5),
-                                   cv=5,n_jobs=4) # uses stratified as default
+                                   cv=5,
+                                   n_jobs=4,
+                                   scoring='roc_auc') # uses stratified as default
 
         train_scores_mean = np.mean(train_scores, axis=1)
         train_scores_std = np.std(train_scores, axis=1)
