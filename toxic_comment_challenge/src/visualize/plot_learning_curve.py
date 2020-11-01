@@ -38,7 +38,6 @@ def plot_curve(estimator, X, yt):
         test_scores_mean = np.mean(test_scores, axis=1)
         test_scores_std = np.std(test_scores, axis=1)
 
-        axes.grid()
         axes.fill_between(train_sizes, train_scores_mean - train_scores_std,
                              train_scores_mean + train_scores_std, alpha=0.1,
                              color="r")
@@ -49,5 +48,7 @@ def plot_curve(estimator, X, yt):
                      label="Training score")
         axes.plot(train_sizes, test_scores_mean, 'o-', color="g",
                      label="Cross-validation score")
+        
         axes.legend(loc="best")
+        ax.grid(True)
         plt.show()
