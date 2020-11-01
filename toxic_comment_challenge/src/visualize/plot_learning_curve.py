@@ -50,5 +50,5 @@ def plot_curve(estimator, X, yt):
                      label="Cross-validation score")
         
         axes.legend(loc="best")
-        ax.grid(True)
+        axes.grid(True)
         plt.show()
