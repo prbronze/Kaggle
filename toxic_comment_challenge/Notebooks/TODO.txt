@@ -1,0 +1,11 @@
+# TODO
+- Calibrating classifiers
+- Create functions to isolate operations
+
+- Faster implementation?
+- Test new algorithms?
+- Focus on errors?
+- Decrease amount of features 10k <
+
+- Should I plot the error metric or the au_roc curve ?
+- Detail text-wise translating the problem. bias variance diagnosed
